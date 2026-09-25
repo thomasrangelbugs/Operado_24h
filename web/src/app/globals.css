@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #e8ecf1;
+  --foreground: #10141b;
+  --surface: #ffffff;
+  --surface-muted: #dce2ea;
+  --ink: #10141b;
+  --ink-muted: #3d4754;
+  --accent: #0a7a5c;
+  --accent-soft: #cfe8df;
+  --navy: #1e3a5f;
+  --line: rgba(16, 20, 27, 0.16);
+  --hero-wash: #cfd8e3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display), var(--font-body), system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(10, 122, 92, 0.22);
+}
+
+[data-agent-focus][data-agent-pressed="true"] {
+  outline: 2px solid rgba(10, 122, 92, 0.7);
+  outline-offset: 3px;
+}
+
+[data-agent-focus].agent-focus-ring {
+  outline: 2px solid rgba(10, 122, 92, 0.45);
+  outline-offset: 2px;
+  transition: outline-color 0.2s ease;
+}
+
+.surface-grid {
+  background-image:
+    linear-gradient(rgba(20, 24, 31, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 24, 31, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.hero-atmosphere {
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 20%, rgba(10, 122, 92, 0.14), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(30, 58, 95, 0.12), transparent 50%),
+    linear-gradient(180deg, #d9e2ea 0%, var(--background) 72%);
+}
