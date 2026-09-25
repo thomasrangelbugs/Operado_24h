@@ -1,0 +1,13 @@
+# A Netlify publica a pasta que contém index.html na raiz dela.
+# Esse index NÃO fica no Git: é gerado pelo build em web/out/index.html
+
+[build]
+  command = "npm ci --prefix web && npm run build --prefix web"
+  publish = "web/out"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

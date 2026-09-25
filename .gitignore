@@ -1,0 +1,12 @@
+node_modules/
+web/node_modules/
+web/.next/
+web/out/
+web/tsconfig.tsbuildinfo
+.DS_Store
+Thumbs.db
+.env
+web/.env
+web/.env.local
+*.log
+.deploy-staging/

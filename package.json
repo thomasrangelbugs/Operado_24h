@@ -1,0 +1,8 @@
+{
+  "name": "operado-24h",
+  "private": true,
+  "scripts": {
+    "build": "npm run build --prefix web",
+    "dev": "npm run dev --prefix web"
+  }
+}
